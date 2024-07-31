@@ -1,16 +1,9 @@
-const numbers = [5, 8, 4, 0, 6, 7, 9];
-//console.log(numbers.indexOf(9));
-
-function solution(numbers) {
-  let answer = 0;
-
-  for (i = 0; i < 10; i++) {
-    //배열에서 0부터 9까지 찾기
-    if (numbers.indexOf(i) === -1) {
-      //indexOf를 통해 값을 못찾으면 -1이므로
-      answer += i; // -1이 되는 i 값을 answer에 더해서 없는 수를 더한다.
-    }
-  }
-  return answer;
-}
-
+setTimeout(function () {
+  console.log("첫 번째 작업 완료");
+  setTimeout(function () {
+    console.log("두 번째 작업 완료");
+    setTimeout(function () {
+      console.log("세 번째 작업 완료");
+    }, 1000);
+  }, 1000);
+}, 1000);
