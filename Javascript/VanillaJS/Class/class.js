@@ -74,3 +74,44 @@
 // const square = new Square(10, 10);
 // console.log(square.area());
 // console.log(Square.area(20, 10));
+
+// class Person {
+//   constructor(name, age) {
+//     this.name = name;
+//     this.age = age;
+//   }
+
+//   introduce() {
+//     console.log(`안녕하세요. 제 이름은
+//         ${this.name}이고 , 나이는 ${this.age}살 입니다.`);
+//   }
+// }
+
+// const person = new Person("한승철", 25);
+// console.log(person.introduce());
+
+// class Calculator {
+//   constructor(a, b) {
+//     this.a = a;
+//     this.b = b;
+//   }
+//   static add(a, b) {
+//     return a + b;
+//   }
+//   static subtract(a, b) {
+//     return a - b;
+//   }
+// }
+
+// const a1 = new Calculator(5, 4);
+// console.log(Calculator.add(5, 4));
+
+// function Calculator() {}
+
+// Calculator.add = function (a, b) {
+//   return a + b;
+// };
+
+// Calculator.subtract = function (a, b) {
+//   return a - b;
+// };
