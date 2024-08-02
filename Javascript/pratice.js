@@ -1,9 +1,14 @@
-setTimeout(function () {
-  console.log("첫 번째 작업 완료");
-  setTimeout(function () {
-    console.log("두 번째 작업 완료");
-    setTimeout(function () {
-      console.log("세 번째 작업 완료");
-    }, 1000);
-  }, 1000);
-}, 1000);
+const s = "abcdedf";
+const b = "qwer";
+
+function solution(s) {
+  const n = s.length;
+  if (n % 2 == 0) {
+    return s[n / 2 - 1] + s[n / 2];
+  } else {
+    console.log(s[(n - 1) / 2]);
+    return;
+  }
+}
+
+solution(s);
