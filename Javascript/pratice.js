@@ -1,14 +1,10 @@
-const s = "abcdedf";
-const b = "qwer";
+window.name = "한승철"
 
-function solution(s) {
-  const n = s.length;
-  if (n % 2 == 0) {
-    return s[n / 2 - 1] + s[n / 2];
-  } else {
-    console.log(s[(n - 1) / 2]);
-    return;
-  }
-}
+const person = {
+  name: "Alice",
+  sayHello: () => {
+    console.log("Hello, " + this.name);
+  },
+};
 
-solution(s);
+person.sayHello(); // Hello, undefined
