@@ -1,28 +1,15 @@
+//요구사항
+//1.counter 컴포넌트 구현하기
+//2. 모든 counter 컴포넌트의 합 구하기
 import { useState } from "react";
-import Board from "./components/Board";
+import Counter from "./components/counter";
 
 function App() {
-  const articles = [
-    {
-      id: 1,
-      title: "ㅎㅇ나는 뭐야",
-      author: "이이선협",
-    },
-    {
-      id: 1,
-      title: "ㅎㅇ나는 뭐야",
-      author: "이이선협",
-    },
-    {
-      id: 1,
-      title: "ㅎㅇ나는 뭐야",
-      author: "이이선협",
-    },
-  ];
+  const [totalcount, setTotalCount] = useState(0);
 
   return (
     <div>
-      <Board articles={articles} />
+      <Counter />
     </div>
   );
 }
