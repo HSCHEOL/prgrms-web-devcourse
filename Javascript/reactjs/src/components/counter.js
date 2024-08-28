@@ -1,28 +1,21 @@
 import { useState } from "react";
 
-function Counter({ onChange }) {
-  const [count, setCount] = useState(0);
+//오류
 
-  const handleIncrease = () => {
-    setCount(count + 1);
-  };
+import React from "react";
 
-  const handledecrease = () => {
-    setCount(count - 1);
-
-    if (count <= 0) {
-      alert("0보다 작을 수 없습니다.");
-      setCount(count);
+const Counter = ({ prop }) => {
+  const handleClick = () => {
+    if (prop) {
+      prop();
     }
   };
 
   return (
     <div>
-      {count}
-      <button onClick={handleIncrease}>+</button>
-      <button onClick={handledecrease}>-</button>
+      <button onClick={handleClick}>실험</button>
     </div>
   );
-}
+};
 
 export default Counter;

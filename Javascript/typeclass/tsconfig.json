@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    // or individually enable strict type checking
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true
+  }
+}

@@ -1,17 +1,12 @@
-//요구사항
-//1.counter 컴포넌트 구현하기
-//2. 모든 counter 컴포넌트의 합 구하기
-import { useState } from "react";
-import Counter from "./components/counter";
+import React from "react";
+import PropTypesComponents from "./components/PropTypesComponents";
 
-function App() {
-  const [totalcount, setTotalCount] = useState(0);
-
+const App = () => {
   return (
-    <div>
-      <Counter />
-    </div>
+    <>
+      <PropTypesComponents item={3} price={3000} />
+    </>
   );
-}
+};
 
 export default App;
