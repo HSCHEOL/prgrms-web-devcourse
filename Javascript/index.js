@@ -1,14 +1,32 @@
-const button1 = document.createElement("button");
-button1.textContent = "Button1";
+const fruits = [
+  {
+    name: "apple",
+    number: 2,
+    price: 1000,
+  },
+  {
+    name: "banana",
+    number: 3,
+    price: 2500,
+  },
+  {
+    name: "orange",
+    number: 5,
+    price: 5000,
+  },
+];
 
-const button2 = document.createElement("button");
-button2.textContent = "Button2";
+function findFruit(FruitsName) {
+  Findfruits = fruits.find((fruits) => fruits.name === FruitsName);
+  if (Findfruits) {
+    console.log(
+      `과일: ${Findfruits.name}
+    수량: ${Findfruits.number}
+    가격: ${Findfruits.price}`
+    );
+  } else {
+    console.log("과일 없음");
+  }
+}
 
-const button3 = document.createElement("button");
-button3.textContent = "Button3";
-
-const main = document.querySelector("#app");
-
-main.appendChild(button1);
-main.appendChild(button2);
-main.appendChild(button3);
+findFruit("apple");

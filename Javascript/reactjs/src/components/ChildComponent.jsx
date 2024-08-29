@@ -1,7 +1,17 @@
 import React from "react";
 
-const ChildComponent = ({ children }) => {
-  return <div>children 값은 {children} 입니다.</div>;
+const ChildComponent = ({ setValue }) => {
+  function updataValue(e) {
+    console.log(e.target.value);
+
+    setValue("안녕하세요");
+  }
+
+  return (
+    <div>
+      <input type="text" onChange={updataValue} />
+    </div>
+  );
 };
 
 export default ChildComponent;
