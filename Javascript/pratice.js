@@ -49,9 +49,9 @@
 // const Array2 = array.filter((element) => element.length >= 5);
 // console.log(Array2);
 
-const number = [5, 19, 42, 36, 70];
-const number2 = number2.map((element) =>
-  (element * 2) % 3 === 0 ? element * 2 : element
-);
+// const number = [5, 19, 42, 36, 70];
+// const number2 = number2.map((element) =>
+//   (element * 2) % 3 === 0 ? element * 2 : element
+// );
 
-console.log(number2);
+// console.log(number2);

@@ -1,25 +1,19 @@
 import React, { useState } from "react";
-import UserID from "./components/UserID";
-import UserPW from "./components/UserPW";
+import ChildComponent from "./components/ChildComponent";
 
 const App = () => {
-  const [ID, setID] = useState("");
-  const [PW, setPW] = useState("");
-
-  const submit = () => {
-    if (ID === "knr0012" && PW === "han074808") {
-      alert("성공");
-    } else {
-      alert("로그인 실패");
-    }
-  };
+  const [Totalcount, setTotalcount] = useState(0);
 
   return (
-    <>
-      <UserID setID={setID} />
-      <UserPW setPW={setPW} />
-      <button onClick={submit}>제출</button>
-    </>
+    <div
+      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+    >
+      <h1>Total Count : {Totalcount}</h1>
+      <div style={{ display: "flex" }}>
+        <ChildComponent setTotalcount={setTotalcount} />
+        <ChildComponent setTotalcount={setTotalcount} />
+      </div>
+    </div>
   );
 };
 
