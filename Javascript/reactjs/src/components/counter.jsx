@@ -1,19 +1,30 @@
-import { useState } from "react";
+import React, { useReducer } from "react";
 
-//오류
+const Counter = () => {
+  const [count, dispatch] = useReducer(countReducer, 0);
 
-import React from "react";
-
-const Counter = ({ prop }) => {
-  const handleClick = () => {
-    if (prop) {
-      prop();
+  function countReducer(state, action) {
+    switch (action.type) {
+      case "UP": {
+        console.log("카운터 업");
+        return state + 1;
+      }
+      case "Down": {
+        console.log("카운터 다운");
+        if (state > 0) {
+          return state - 1;
+        }
+      }
+      default:
+        return state;
     }
-  };
+  }
 
   return (
     <div>
-      <button onClick={handleClick}>실험</button>
+      <h1>현재 count 값은 {count}</h1>
+      <button onClick={() => dispatch({ type: "UP" })}>+</button>
+      <button onClick={() => dispatch({ type: "Down" })}>-</button>
     </div>
   );
 };

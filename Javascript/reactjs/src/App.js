@@ -1,30 +1,27 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
+import "./App.css";
+import UserInput from "./components/UserInput";
+import UserOutput from "./components/UserOutput";
+
+//부모 컴포넌트에서 setResult 를 내려서 사용자의 입력 result를 객체 배열로 받아온다.
 
 const App = () => {
-  const [name, setName] = useState(" ");
-  const [ageValue, setAgeValue] = useState(""); // 나이도 상태로 관리
+  const [result, setResult] = useState([]);
 
-  const names = useRef("");
-  const age = useRef("");
-
-  const nameChange = () => {
-    setName(names.current.value);
+  const handleDelete = (index) => {
+    setResult((prev) => prev.filter((_, i) => i !== index));
   };
 
-  const ageChange = () => {
-    setAgeValue(age.current.value);
-  };
+  useEffect(() => {
+    console.log(result);
+  }, [result]);
 
   return (
-    <div>
-      <div>
-        <h1>input 태그 value 값 지정</h1>
-        이름:{" "}
-        <input type="text" value={name} ref={names} onChange={nameChange} />
-        나이:{" "}
-        <input type="number" value={ageValue} ref={age} onChange={ageChange} />
-      </div>
-    </div>
+    <main>
+      <h1>전체 회원 수:{result.length}</h1>
+      <UserInput setResult={setResult} /> <br />
+      <UserOutput result={result} handleDelete={handleDelete} />
+    </main>
   );
 };
 
